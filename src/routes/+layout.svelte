@@ -49,7 +49,7 @@
 
 <svelte:head>
   <title>RoofCalc</title>
-  <meta name="description" content="Solar API demo" />
+  <meta name="description" content="RoofCalc is a tool for checking how much solar energy you can generate" />
 </svelte:head>
 
 <main class="surface on-surface-text body-medium flex flex-col w-screen h-screen">
