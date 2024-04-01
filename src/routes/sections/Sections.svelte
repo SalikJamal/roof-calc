@@ -72,7 +72,8 @@
     />
   {/if}
 
-  {#if buildingInsights && configId !== undefined}
+  <!-- Disabled data layers and solarpotential section -->
+  <!-- {#if buildingInsights && configId !== undefined}
     <md-divider inset />
     <DataLayersSection
       bind:expandedSection
@@ -94,5 +95,5 @@
       solarPanelConfigs={buildingInsights.solarPotential.solarPanelConfigs}
       defaultPanelCapacityWatts={buildingInsights.solarPotential.panelCapacityWatts}
     />
-  {/if}
+  {/if} -->
 </div>

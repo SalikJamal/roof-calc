@@ -133,12 +133,12 @@
     }
 
     const bounds = layer.bounds;
-    console.log('Render layer:', {
-      layerId: layer.id,
-      showRoofOnly: showRoofOnly,
-      month: month,
-      day: day,
-    });
+    // console.log('Render layer:', {
+    //   layerId: layer.id,
+    //   showRoofOnly: showRoofOnly,
+    //   month: month,
+    //   day: day,
+    // });
     overlays.map((overlay) => overlay.setMap(null));
     overlays = layer
       .render(showRoofOnly, month, day)

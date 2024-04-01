@@ -94,18 +94,18 @@
   let remainingLifetimeUtilityBill: number = yearlyUtilityBillEstimates.reduce((x, y) => x + y, 0);
   let totalCostWithSolar: number =
     installationCostTotal + remainingLifetimeUtilityBill - solarIncentives;
-  console.log(`Cost with solar: $${totalCostWithSolar.toFixed(2)}`);
+  // console.log(`Cost with solar: $${totalCostWithSolar.toFixed(2)}`);
 
   // Cost without solar for installation life span
   let yearlyCostWithoutSolar: number[] = [...Array(installationLifeSpan).keys()].map(
     (year) => (monthlyAverageEnergyBill * 12 * costIncreaseFactor ** year) / discountRate ** year,
   );
   let totalCostWithoutSolar: number = yearlyCostWithoutSolar.reduce((x, y) => x + y, 0);
-  console.log(`Cost without solar: $${totalCostWithoutSolar.toFixed(2)}`);
+  // console.log(`Cost without solar: $${totalCostWithoutSolar.toFixed(2)}`);
 
   // Savings with solar for installation life span
   let savings: number = totalCostWithoutSolar - totalCostWithSolar;
-  console.log(`Savings: $${savings.toFixed(2)} in ${installationLifeSpan} years`);
+  // console.log(`Savings: $${savings.toFixed(2)} in ${installationLifeSpan} years`);
   // [END solar_potential_calculations]
 
   // Reactive calculations

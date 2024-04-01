@@ -74,7 +74,7 @@
       return;
     }
 
-    console.log('showSolarPotential');
+    // console.log('showSolarPotential');
     buildingInsights = undefined;
     requestError = undefined;
 
@@ -162,9 +162,10 @@
     ).toFixed(2)} MWh`}
   >
     <div class="flex flex-col space-y-2 px-2">
-      <span class="outline-text label-medium">
+      <!-- Removing small text -->
+      <!-- <span class="outline-text label-medium">
         <b>{title}</b> provides data on the location, dimensions & solar potential of a building.
-      </span>
+      </span> -->
 
       <InputPanelsCount
         bind:configId
@@ -176,13 +177,14 @@
         label="Panel capacity"
         suffix="Watts"
       />
-      <InputBool bind:value={showPanels} label="Solar panels" />
+      <!-- <InputBool bind:value={showPanels} label="Solar panels" /> -->
 
-      <div class="grid justify-items-end">
+      <!-- Disabaled API response -->
+      <!-- <div class="grid justify-items-end">
         <md-filled-tonal-button role={undefined} on:click={() => apiResponseDialog.show()}>
           API response
         </md-filled-tonal-button>
-      </div>
+      </div> -->
 
       <md-dialog bind:this={apiResponseDialog}>
         <div slot="headline">
@@ -219,8 +221,8 @@
             {
               icon: 'square_foot',
               name: 'Roof area',
-              value: showNumber(buildingInsights.solarPotential.wholeRoofStats.areaMeters2),
-              units: 'm²',
+              value: showNumber((buildingInsights.solarPotential.wholeRoofStats.areaMeters2 * 10.764)),
+              units: 'ft²',
             },
             {
               icon: 'solar_power',

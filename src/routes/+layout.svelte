@@ -48,7 +48,7 @@
 </script>
 
 <svelte:head>
-  <title>Solar API demo</title>
+  <title>RoofCalc</title>
   <meta name="description" content="Solar API demo" />
 </svelte:head>
 
